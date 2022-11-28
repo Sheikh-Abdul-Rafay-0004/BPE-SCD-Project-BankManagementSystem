@@ -1,0 +1,30 @@
+PROJECT SOFTWRAE CONSTRUCTUTION AND DEVELOPMENT 
+NAME: Sheikh Abdul Rafay
+ID: SP21-BSSE-0004
+TOPIC: BANK MANAEGEMENT SYSTEM
+
+			USE CASE
+SIMPLE ACCOUNT:
+	In this phase user have following rights
+•	User will allow open a Simple Account that name is 
+o	Current Account
+o	Saving Account 
+o	Salary Account			
+
+BUSSINESS ACCOUNT:
+	In this phase only those users will create this account that they have to fullfill the certain condition
+o	USER Can DO BUSSINES though Bank Medium In any Platform and Will access their money in own way as Halal Or Haram with deduction of certain amount of Bank Chargers
+
+RULES
+	If user have a customer of bank as a Simple account must have 2 years of Bank Statement 
+	If user is not a customer of bank as respect to any account so User must have a 5 year of Past Bank Statement with a Single Account of any Respected Bank.
+	User Must have Taxpayer and Register in tax department
+	User Must have 10% of his amount submitted as security deposit in bank
+ 
+PASSWORD RECOVERY:
+In this phase bank will give a certain key of word to user for his password recovery when he Enter Wrong password in ATM Card and User can use this key Only 2 time if it will wrong then User Account is Temporary Block as a Security issue. And User Will have to come in the bank and Reopen His Account after verification
+
+Crypto Trading:
+
+User will buy and Sell Crypto Currency from Bank with few amount of above and Bellow Market rate and they can use it any platform for saving from Scam and Fraud issue.
+
