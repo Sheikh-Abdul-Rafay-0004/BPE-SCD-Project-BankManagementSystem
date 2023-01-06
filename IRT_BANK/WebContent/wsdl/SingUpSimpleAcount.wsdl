@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://main" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://main" xmlns:intf="http://main" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://main" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="tableres">
+    <complexType>
+     <sequence>
+      <element name="Account_Number" type="xsd:string"/>
+      <element name="First_Name" type="xsd:string"/>
+      <element name="Last_Name" type="xsd:string"/>
+      <element name="Phone_Number" type="xsd:string"/>
+      <element name="Email" type="xsd:string"/>
+      <element name="Account_Type" type="xsd:string"/>
+      <element name="Country" type="xsd:string"/>
+      <element name="Cuty" type="xsd:string"/>
+      <element name="Address" type="xsd:string"/>
+      <element name="CNIC" type="xsd:string"/>
+      <element name="Occupation" type="xsd:string"/>
+      <element name="D_O_B" type="xsd:string"/>
+      <element name="Password" type="xsd:string"/>
+      <element name="Amount" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="tableresResponse">
+    <complexType>
+     <sequence>
+      <element name="tableresReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="generateKey">
+    <complexType/>
+   </element>
+   <element name="generateKeyResponse">
+    <complexType>
+     <sequence>
+      <element name="generateKeyReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="generateKeyResponse">
+
+      <wsdl:part element="impl:generateKeyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="generateKeyRequest">
+
+      <wsdl:part element="impl:generateKey" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="tableresResponse">
+
+      <wsdl:part element="impl:tableresResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="tableresRequest">
+
+      <wsdl:part element="impl:tableres" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="SingUpSimpleAcount">
+
+      <wsdl:operation name="tableres">
+
+         <wsdl:input message="impl:tableresRequest" name="tableresRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:tableresResponse" name="tableresResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="generateKey">
+
+         <wsdl:input message="impl:generateKeyRequest" name="generateKeyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:generateKeyResponse" name="generateKeyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SingUpSimpleAcountSoapBinding" type="impl:SingUpSimpleAcount">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="tableres">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="tableresRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="tableresResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="generateKey">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="generateKeyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="generateKeyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SingUpSimpleAcountService">
+
+      <wsdl:port binding="impl:SingUpSimpleAcountSoapBinding" name="SingUpSimpleAcount">
+
+         <wsdlsoap:address location="http://localhost:8080/IRT_BANK/services/SingUpSimpleAcount"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
